@@ -7,8 +7,7 @@ import Rlogo from "@/public/pngwing.com.png"
 import { useForm,SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import{ZodType, z,string} from "zod";
-import { Button } from 'flowbite-react';
-import { Avatar } from 'flowbite-react';
+import { Button } from "flowbite-react";
 import {Divfrom,
   Erormsg,
   Rdiv2,
@@ -35,14 +34,14 @@ import {Divfrom,
   Wel,
 } from "./styled/mainp.styled"
 import { useSession, signIn, signOut } from "next-auth/react"
-import { data } from "autoprefixer";
+
 type Inpuvalue = {
   email: string;
   password: string;
 };
 
 const FormPage=()=>{
-  const { data: session } = useSession();
+  var { data: session } = useSession();
   const personSchema:ZodType<Inpuvalue> =  z.object({
       email:z.string().min(1, { message: "Email is required" }).email({
         message: "Must be a valid email",
