@@ -16,11 +16,7 @@ export const authOptions = {
         async authorize(credentials){
              const {email, password} = credentials;
              if (email !== "mano@gmail.com" || password !== "manoranjan") {
-<<<<<<< HEAD
-              console.log("uauthorised");
-=======
-              console.log("unauthorised");
->>>>>>> 26d4c5f8be9c564e3b14e28c695df98be3ddf677
+              return{email:"unauthorised",password:"unauthorised",image:"null",name:"unauthorised"};
             }
             else{
             return{email:"mano@gmail.com",password:"manoranjan",image:"null",name:"Mano"};
