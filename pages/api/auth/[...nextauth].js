@@ -16,7 +16,7 @@ export const authOptions = {
         async authorize(credentials){
              const {email, password} = credentials;
              if (email !== "mano@gmail.com" || password !== "manoranjan") {
-              throw new error("invalid credential");
+              console.log("unauthorised");
             }
             else{
             return{email:"mano@gmail.com",password:"manoranjan",image:"null",name:"Mano"};
